@@ -56,7 +56,14 @@ print("Sales Tax: $" + str(taxes))
 
 #Here plus the valor of taxes and the valor of subtotal and round
 total = subtotal + taxes
-total = round(total, 2)
+if npersons >= 10: #In this if we calculate a discount for more the 10 persons
+    discount = total*.10
+    total = total - discount
+    discount = round(discount, 2)
+    total = round(total, 2)
+    print("You have a wholesale discount for $" + str(discount))
+else:
+    total = round(total, 2)
 print("Total: $" + str(total))
 print()
 paymentamount = int(input("What is the payment amount? "))
@@ -67,3 +74,4 @@ change = round(change, 2)
 print("Change: $" + str(change))
 print()
 print("Enjoy your Meal!!")
+print()
