@@ -24,20 +24,20 @@ sodacost = float(input("What is the price of a soda? "))
 if sodarequest == "yes":
     soda = npersons * sodacost
 elif sodarequest == "no":
-    soda == 0
+    soda = 0
 else:
     print("Incorrect Answer")
-    soda == 0
+    soda = 0
 dessertrequest = input("Do you want Dessert for every meal?: ")
 dessertrequest = dessertrequest.lower()
 dessertcost = float(input("What is the price of a dessert? "))
 if dessertrequest == "yes":
     dessert = npersons * dessertcost
 elif dessertrequest == "no":
-    dessert == 0
+    dessert = 0
 else:
     print("Incorrect Answer")
-    dessert == 0
+    dessert = 0
 
 #In float variable I save the sales taxe rate
 taxesrate = float(input("What is the sales tax rate? "))
