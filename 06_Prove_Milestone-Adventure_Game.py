@@ -9,7 +9,7 @@ def start_adventure():
     print("You are this stranger...")
     print()
     item = input("You are walking through a dark forest and find two items: " +
-                 "\n" + "a MATCH and a FLASHLIGHT." +
+                 "\n" + "a MATCH and a FLASHLIGHT or INTO the Darkness " +
                  "\n" + "Which one do you want to pick up? ")
     print()
     item = item.upper()
@@ -78,12 +78,40 @@ def start_adventure():
                 print("Incorrect Answer")
         else:
             print("Incorrect Answer")
+    elif item == "INTO":
+        desition1 = input("You walk INTO the dark without a light in your hand" +
+                          "\n" + "not seeing, you fall into what looks like a cave, your body hurts, but you manage to see a light deep inside, perhaps an exit. what are you doing?" +
+                          "\n" + "WALK or CLIMB to get out. ")
+        desition1 = desition1.upper()
+        print()
+        if desition1 == "WALK":
+            desition2 = input("You WALK inside the cave following the light, you are no longer hungry, you just want to get out of there.," +
+                              "\n" + "You get to the source of light, there are two torches and in the middle of them an entrance that leads to some stairs that descend," +
+                              "\n" + "hat you go DOWN the stairs or RETURN through the cave ")
+            desition2 = desition2.upper()
+            print()
+            if desition2 == "DOWN":
+                print("You take a torch, go DOWN the stairs, your heart beats, you gasp for breath, \nbut you can't stop going down, you see blue, purple, and green lights while drums resonate, \nyou can't stop going down..")
+            elif desition2 == "RETURN":
+                print("You take a torch and return, there is no curiosity, just a desire to get out, \nbut the hole you fell through is gone, there is only one possible path.")
+                down()
+            else:
+                print("Incorrect Answer")
+        elif desition1 == "CLIMB":
+            print("You try to climb, as you climb, you start to feel the ground rumble, \nyou can't hold on and fall back to the ground, \nit stops rumbling, you try again and can't get out, \nyou end up on the ground, again and again, you've run out strength and you know that there is only one way left, \nto follow the light.")
+            down()
+        else:
+            print("Incorrect Answer")
     else:
         print("Incorrect Answer")
 
 
 def exit():
  print("See you later adventurer")
+
+def down():
+    print()
+    print("You come to the light, a path that descends, stairs, you go down, \nyou don't stop going down, you can't stop going down, \ndifferent colored lights, drums beating, you can't stop, \nthere is no turning back.")
 
 
 print("Welcome Adventurer")
