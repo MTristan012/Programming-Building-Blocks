@@ -5,7 +5,7 @@ By: Tristan Perea
 
 import random
 
-magicNumber = random.randint(1,100)
+magicNumber = random.randint(1, 100)
 
 playGame = input("You want to play? ")
 playGame = playGame.lower()
@@ -14,6 +14,7 @@ guess = int(input("What is your guess? "))
 accountant = 0
 
 while playGame == "yes":
+
     while magicNumber != guess:
         if magicNumber > guess:
             print("Lower")
@@ -24,11 +25,11 @@ while playGame == "yes":
             guess = int(input("What is your guess? "))
             accountant = accountant + 1
     print("You guessed it! after so " + str(accountant) + " attempst")
-    magicNumber = random.randint(1,100)
-    accountant = 0
-    guess = 0
     playGame = input("You want to coninue playing? ")
     playGame = playGame.lower()
+    magicNumber = random.randint(1, 100)
+    accountant = 0
+    guess = 0
 
 print("Thanks for Play!")
 
