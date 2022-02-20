@@ -1,6 +1,6 @@
 """
 By: Tristan Perea
-07 Prove Assignment Milestone
+08 Prove Assignment Milestone
 """
 
 from PIL import Image, ImageDraw
@@ -133,4 +133,4 @@ else:
 
 
 newImage.save("NewImage.png")
-print("Thanks for Use my editor\nYour Image was saved with the name NewImage.png on 07_Prove_Assignment_Milestone_Images")
+print("Thanks for Use my editor\nYour Image was saved with the name NewImage.png")
