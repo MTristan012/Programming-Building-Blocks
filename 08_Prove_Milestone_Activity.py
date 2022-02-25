@@ -94,7 +94,7 @@ for height in range(0, greenImageHeight):
     for width in range(0, greenImageWidth):
         (r, g, b) = greenImagePixel[width, height]
         (bIPr, bIPg, bIPb) = backgroundImagePixel[width, height]
-        if (r >= gIPr and g == gIPg and b >= gIPb):
+        if (r < 130 and g > 140):
             newPixel[width, height] = (bIPr, bIPg, bIPb)
         else:
             newPixel[width, height] = (r, g, b)
