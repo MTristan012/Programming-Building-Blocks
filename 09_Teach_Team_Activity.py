@@ -21,8 +21,8 @@ listNum.pop()
 listSum = sum(listNum)
 print("The sum is: " + str(listSum))
 
-listProm = average(listNum)
-print("The average is: " + str(listProm))
+listAvg = average(listNum)
+print("The average is: " + str(listAvg))
 
 print("The largest number is: " + str(max(listNum)))
 
