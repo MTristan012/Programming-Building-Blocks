@@ -25,7 +25,8 @@ while action != 5:
     elif action == 2:
         print("The contents of the shopping cart are: ")
         for counter, (item, itemPrice) in enumerate(zip(items, itemsPrice),  start=1):
-            print(f"{counter}. {item} - ${itemPrice}")
+            print(f"{counter}. {item} - ${float(itemPrice):.2f}")
+            #print(str(counter) +". " + item + " - $" +"{:.2f}".format(float(itemPrice)))
     elif action == 3:
         remove = int(input("Which item would you like to remove?: "))
         remove = remove - 1
@@ -37,17 +38,18 @@ while action != 5:
     elif action == 4:
         subTotalList = [float(string) for string in itemsPrice]
         subTotal = sum(subTotalList)
-        print(f"The total price of the items in the shopping cart is ${subTotal}")
+        print(
+            f"The total price of the items in the shopping cart is ${float(subTotal):.2f}")
         selector = input("Do you want to finish your purchase? (yes/no): ")
         selector = selector.capitalize()
         if selector == "Yes":
             taxesrate = float(input("What is the sales tax rate? "))
             taxes = subTotal/(100/taxesrate)
             taxes = round(taxes, 2)
-            print("Sales Tax: $" + str(taxes))
+            print(f"Sales Tax: ${float(taxes):.2f}")
             total = subTotal + taxes
             total = round(total, 2)
-            print("Total: $" + str(total))
+            print(f"Total: ${float(total):.2f}")
             print("Please enter the following information: ")
             name = input("First Name: ")
             lastName = input("Last Name: ")
@@ -60,7 +62,7 @@ while action != 5:
             print(lastName.upper() + ", " + name.capitalize())
             print(email.lower())
             print(phonenumber)
-            print("Total: $" + str(total))
+            print(f"Total: ${float(total):.2f}")
             print("Your purchase will arrive at the following address: " + address)
             print("--------------------------------------------------")
             break
