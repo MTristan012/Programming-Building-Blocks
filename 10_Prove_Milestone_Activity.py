@@ -3,6 +3,9 @@ By: Tristan Perea
 09 Prove Assignment Milestone
 """
 
+from PIL import Image, ImageDraw, ImageFont
+
+
 items = []
 newItem = ""
 itemsPrice = []
@@ -65,6 +68,20 @@ while action != 5:
             print(f"Total: ${float(total):.2f}")
             print("Your purchase will arrive at the following address: " + address)
             print("--------------------------------------------------")
+            ticketPrint = input("You want to Save your Ticket? (yes/no) ")
+            ticketPrint = ticketPrint.capitalize()
+            if ticketPrint == "Yes":
+                completeName = lastName.upper() + ", " + name.capitalize()
+                ticket = Image.new('RGB', (150, 300), color=(73, 109, 137))
+                d = ImageDraw.Draw(ticket)
+                d.text((10, 10), completeName, fill="white")
+                d.text((10, 60), email.lower(), fill="white")
+                d.text((10, 110), f"Total: ${float(total):.2f}", fill="white")
+                d.text((10, 160), "Thank you. Goodbye.", fill="white")
+                ticket.save("Ticket.png")
+                ticket.show()
+            else:
+                print()
             break
         else:
             print("Returning to the main menu")
